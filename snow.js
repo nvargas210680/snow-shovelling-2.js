@@ -1,4 +1,4 @@
-function isShovellingSnowTime(hasNoShovel){
+function isShovelingSnowTime(hasNoShovel){
     console.log("I do not have any shovel?", hasNoShovel);
     if(hasNoShovel){
         console.log("Go to home depot, buy one")
@@ -32,7 +32,7 @@ function goOutSide(){
     console.log("go outside");
 }
 
-function startShovelling(){
+function startShoveling(){
     console.log("start shovelling");
 }
 
@@ -40,30 +40,30 @@ function getinsideHaveCoffee(){
     console.log("go inside, have coffee");
 }
 
-function shovellingTime(hasNoShovel, shovelIsBroken){
+function shovelingTime(hasNoShovel, shovelIsBroken){
     console.log("start");
-    isShovellingSnowTime(hasNoShovel);
+    isShovelingSnowTime(hasNoShovel);
     getReady();
     checkShovelNoBroken(shovelIsBroken);
     putOnGloves()
     putOnCoat()
     putOnSnowPants()
     goOutSide()
-    startShovelling()
+    startShoveling()
     getinsideHaveCoffee()   
     console.log("end")
 }
 console.log("\n")
 console.log("starting process with shovel");
-shovellingTime(true, false);
+shovelingTime(true, false);
 console.log("\n");
 console.log("starting the process with broken shovel");
-shovellingTime(false, true);
+shovelingTime(false, true);
 console.log("\n")
 console.log("starting the process with shovel but broken");
-shovellingTime(false, false);
+shovelingTime(false, false);
 console.log("\n");
 console.log("starting process with no shovel");
-shovellingTime(true, true);
+shovelingTime(true, true);
 
 
