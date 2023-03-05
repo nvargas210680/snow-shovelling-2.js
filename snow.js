@@ -1,67 +1,69 @@
-function isShovellingSnowTime(haveShovel){
-    console.log("Do I have a shovel?", haveShovel);
-    if(haveShovel){
-        console.log("Go to Home Depot");
-        console.log("buy a shovel");
+function isShovellingSnowTime(hasNoShovel){
+    console.log("I do not have any shovel?", hasNoShovel);
+    if(hasNoShovel){
+        console.log("Go to home depot, buy one")
+        console.log("Go grab it");
+       
     }
+}  
+function getReady(){
+    console.log("get ready");
 }
-function putOnCoat(){
-    console.log("put on coat");
-}
-
-function checkShovel(shovelInCondition){
-    console.log("is the shovell broken", shovelInCondition);
-    if(shovelInCondition){
+function checkShovelNoBroken(shovelIsBroken){
+    console.log("is the shovel Broken?", shovelIsBroken);
+    if(shovelIsBroken){
         console.log("fix it");
     }
 }
 
-function putOnSnowBoots(){
-    console.log("put on snow boots")
+function putOnGloves(){
+    console.log("put on gloves");
+}
+
+function putOnCoat(){
+    console.log("put on coat");
 }
 
 function putOnSnowPants(){
-    console.log("put on snow pants");
-}
-
-function grabTheShovel(){
-    console.log("grab the shovel");
+    console.log("put on snow pants")
 }
 
 function goOutSide(){
+    console.log("go outside");
+}
+
+function startShovelling(){
     console.log("start shovelling");
 }
 
-function pileTheSnowOnTheSide(){
-    console.log("pile the snow on the side");
+function getinsideHaveCoffee(){
+    console.log("go inside, have coffee");
 }
 
-function goBackInside(){
-    console.log("Go back inside");
+function shovellingTime(hasNoShovel, shovelIsBroken){
+    console.log("start");
+    isShovellingSnowTime(hasNoShovel);
+    getReady();
+    checkShovelNoBroken(shovelIsBroken);
+    putOnGloves()
+    putOnCoat()
+    putOnSnowPants()
+    goOutSide()
+    startShovelling()
+    getinsideHaveCoffee()   
+    console.log("end")
 }
-
-function snowShovelling(haveShovel, shovelInCondition){
-console.log("make sure you have all you need");
-isShovellingSnowTime(haveShovel);
-putOnCoat();
-checkShovel(shovelInCondition);
-putOnSnowBoots();
-putOnSnowPants();
-grabTheShovel();
-goOutSide();
-pileTheSnowOnTheSide();
-goBackInside();
-console.log("rest")
-}
-
+console.log("\n")
+console.log("starting process with shovel");
+shovellingTime(true, false);
 console.log("\n");
-console.log("Time to shovel snow");
-snowShovelling(false, true);
-console.log("/n");
-console.log("We do have a shovel but is broken");
-snowShovelling(true, false);
-
-
-
+console.log("starting the process with broken shovel");
+shovellingTime(false, true);
+console.log("\n")
+console.log("starting the process with shovel but broken");
+shovellingTime(false, false);
+console.log("\n");
+console.log("starting process with no shovel");
+shovellingTime(true, true);
 
 
